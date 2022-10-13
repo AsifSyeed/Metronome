@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		87315EEF28F82B59004051C6 /* stick_low.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 87315EEE28F82B59004051C6 /* stick_low.mp3 */; };
 		8736B70028F7D8A900907650 /* stick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8736B6FF28F7D8A900907650 /* stick.mp3 */; };
 		87A2FA5428F67561002C1901 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A2FA5328F67561002C1901 /* AppDelegate.swift */; };
 		87A2FA5628F67561002C1901 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A2FA5528F67561002C1901 /* SceneDelegate.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		87315EEE28F82B59004051C6 /* stick_low.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = stick_low.mp3; sourceTree = "<group>"; };
 		8736B6FF28F7D8A900907650 /* stick.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = stick.mp3; sourceTree = "<group>"; };
 		87A2FA5028F67561002C1901 /* Metronome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Metronome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87A2FA5328F67561002C1901 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 		8736B6FE28F7D89500907650 /* Sound */ = {
 			isa = PBXGroup;
 			children = (
+				87315EEE28F82B59004051C6 /* stick_low.mp3 */,
 				8736B6FF28F7D8A900907650 /* stick.mp3 */,
 			);
 			path = Sound;
@@ -244,6 +247,7 @@
 			files = (
 				87A2FA6028F67562002C1901 /* LaunchScreen.storyboard in Resources */,
 				8736B70028F7D8A900907650 /* stick.mp3 in Resources */,
+				87315EEF28F82B59004051C6 /* stick_low.mp3 in Resources */,
 				87A2FA5D28F67562002C1901 /* Assets.xcassets in Resources */,
 				87A2FA5B28F67561002C1901 /* Main.storyboard in Resources */,
 			);
