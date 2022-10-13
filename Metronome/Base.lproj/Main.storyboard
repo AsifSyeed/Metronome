@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3MN-Xi-7ie" userLabel="Beat">
-                                <rect key="frame" x="52.5" y="388" width="309" height="120"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3MN-Xi-7ie" userLabel="Beat">
+                                <rect key="frame" x="52.5" y="244" width="309" height="120"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="3MN-Xi-7ie" secondAttribute="height" multiplier="103:40" id="lQO-bu-9lY"/>
@@ -27,14 +27,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JFA-UX-SkT" userLabel="Play Button View">
-                                <rect key="frame" x="157" y="628" width="100" height="100"/>
+                                <rect key="frame" x="157" y="484" width="100" height="100"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ha9-iu-Kih">
                                         <rect key="frame" x="0.0" y="-3" width="100" height="106"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <imageReference key="image" image="play.circle.fill" catalog="system" symbolScale="large"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xl7-2z-CDb">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xl7-2z-CDb" userLabel="Play Button">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain"/>
@@ -57,6 +57,73 @@
                                     <constraint firstItem="ha9-iu-Kih" firstAttribute="leading" secondItem="JFA-UX-SkT" secondAttribute="leading" id="j1r-c6-P6b"/>
                                 </constraints>
                             </view>
+                            <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="uBO-EK-kaR">
+                                <rect key="frame" x="57" y="634" width="300" height="80"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wwC-eI-dQv" userLabel="Plus Button View">
+                                        <rect key="frame" x="0.0" y="0.0" width="147.5" height="80"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gda-a1-rLG">
+                                                <rect key="frame" x="0.0" y="-3" width="147.5" height="86"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <imageReference key="image" image="plus.circle.fill" catalog="system" symbolScale="large"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7rN-4R-sT4" userLabel="Plus Button">
+                                                <rect key="frame" x="0.0" y="0.0" width="147.5" height="80"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain"/>
+                                                <connections>
+                                                    <action selector="plusButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y4v-KA-YwY"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="7rN-4R-sT4" firstAttribute="leading" secondItem="wwC-eI-dQv" secondAttribute="leading" id="150-np-kzY"/>
+                                            <constraint firstAttribute="trailing" secondItem="gda-a1-rLG" secondAttribute="trailing" id="LR2-ip-C7c"/>
+                                            <constraint firstAttribute="trailing" secondItem="7rN-4R-sT4" secondAttribute="trailing" id="SDR-cN-1V6"/>
+                                            <constraint firstItem="7rN-4R-sT4" firstAttribute="top" secondItem="wwC-eI-dQv" secondAttribute="top" id="USV-XF-2gH"/>
+                                            <constraint firstItem="gda-a1-rLG" firstAttribute="leading" secondItem="wwC-eI-dQv" secondAttribute="leading" id="aSm-o1-IYi"/>
+                                            <constraint firstItem="gda-a1-rLG" firstAttribute="top" secondItem="wwC-eI-dQv" secondAttribute="top" id="cHK-dF-dZV"/>
+                                            <constraint firstAttribute="bottom" secondItem="gda-a1-rLG" secondAttribute="bottom" id="rm2-Ck-f2a"/>
+                                            <constraint firstAttribute="bottom" secondItem="7rN-4R-sT4" secondAttribute="bottom" id="uNF-vQ-sFg"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DQ0-3b-la4" userLabel="Minus Button View">
+                                        <rect key="frame" x="152.5" y="0.0" width="147.5" height="80"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mra-fr-O2z">
+                                                <rect key="frame" x="0.0" y="-3" width="147.5" height="86"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <imageReference key="image" image="minus.circle.fill" catalog="system" symbolScale="large"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bQ-fm-JZw" userLabel="Minus Button">
+                                                <rect key="frame" x="0.0" y="0.0" width="147.5" height="80"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain"/>
+                                                <connections>
+                                                    <action selector="minusButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fap-0M-ATF"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="1bQ-fm-JZw" secondAttribute="bottom" id="01b-y1-uQq"/>
+                                            <constraint firstItem="mra-fr-O2z" firstAttribute="top" secondItem="DQ0-3b-la4" secondAttribute="top" id="Gsw-9B-Jjc"/>
+                                            <constraint firstAttribute="trailing" secondItem="1bQ-fm-JZw" secondAttribute="trailing" id="IU6-V4-DZf"/>
+                                            <constraint firstItem="mra-fr-O2z" firstAttribute="leading" secondItem="DQ0-3b-la4" secondAttribute="leading" id="g4M-xb-siL"/>
+                                            <constraint firstAttribute="bottom" secondItem="mra-fr-O2z" secondAttribute="bottom" id="hlf-v9-Lff"/>
+                                            <constraint firstItem="1bQ-fm-JZw" firstAttribute="top" secondItem="DQ0-3b-la4" secondAttribute="top" id="jF4-jI-HfZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="mra-fr-O2z" secondAttribute="trailing" id="nOB-UL-Vka"/>
+                                            <constraint firstItem="1bQ-fm-JZw" firstAttribute="leading" secondItem="DQ0-3b-la4" secondAttribute="leading" id="uPJ-aE-asB"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="AdC-Ft-mgT"/>
+                                    <constraint firstAttribute="width" secondItem="uBO-EK-kaR" secondAttribute="height" multiplier="15:4" id="Pcz-uU-l33"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -64,8 +131,10 @@
                             <constraint firstItem="JFA-UX-SkT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9WR-O8-6ZT"/>
                             <constraint firstItem="JFA-UX-SkT" firstAttribute="top" secondItem="3MN-Xi-7ie" secondAttribute="bottom" constant="120" id="GwQ-A5-Crp"/>
                             <constraint firstItem="3MN-Xi-7ie" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.746377" id="Hz1-L7-RMn"/>
+                            <constraint firstItem="uBO-EK-kaR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nqp-8U-4ou"/>
+                            <constraint firstItem="3MN-Xi-7ie" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="Vjf-fg-jIu"/>
+                            <constraint firstItem="uBO-EK-kaR" firstAttribute="top" secondItem="JFA-UX-SkT" secondAttribute="bottom" constant="50" id="hBy-cG-NeM"/>
                             <constraint firstItem="3MN-Xi-7ie" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mQx-eE-piq"/>
-                            <constraint firstItem="3MN-Xi-7ie" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="xYF-At-ABI"/>
                         </constraints>
                     </view>
                     <connections>
@@ -79,6 +148,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="minus.circle.fill" catalog="system" width="128" height="121"/>
         <image name="play.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
     </resources>
 </document>

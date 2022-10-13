@@ -13,14 +13,21 @@ class ViewController: UIViewController {
     @IBOutlet weak var playButtonImage: UIImageView!
     
     var isPlay: Bool = false
-    var tempoValue: Int = 200
+    var tempoValue: Int = 60 {
+        didSet {
+            tempoLabel.text = String(tempoValue)
+            if isPlay {
+                stopTimer()
+                startTimer()
+            }
+        }
+    }
     var count: Int = 0
     var timer: Timer?
     var audioPlayer: AVAudioPlayer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.initialSetup()
     }
     
@@ -67,7 +74,6 @@ class ViewController: UIViewController {
     }
     
     @IBAction func playButtonAction(_ sender: Any) {
-        playMetronomeAudio()
         if isPlay {
             isPlay = false
             stopTimer()
@@ -78,5 +84,14 @@ class ViewController: UIViewController {
             playButtonImage.image = UIImage(systemName: "pause.circle.fill")
         }
     }
+    
+    @IBAction func plusButtonAction(_ sender: Any) {
+        tempoValue += 1
+    }
+    
+    @IBAction func minusButtonAction(_ sender: Any) {
+        tempoValue -= 1
+    }
+    
 }
 
