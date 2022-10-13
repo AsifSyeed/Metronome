@@ -60,10 +60,10 @@ class ViewController: UIViewController {
         let url: URL
         
         if count == 1 {
-            guard let soundPath = Bundle.main.path(forResource: "stick", ofType: "mp3") else { return }
+            guard let soundPath = Bundle.main.path(forResource: "stick_low", ofType: "mp3") else { return }
             url = URL(fileURLWithPath: soundPath)
         } else {
-            guard let soundPath = Bundle.main.path(forResource: "stick_low", ofType: "mp3") else { return }
+            guard let soundPath = Bundle.main.path(forResource: "stick", ofType: "mp3") else { return }
             url = URL(fileURLWithPath: soundPath)
         }
         
