@@ -26,7 +26,12 @@ class ViewController: UIViewController {
     }
     var count: Int = 1 {
         didSet {
-            countLabel.text = String(count)
+            countLabel.text = String(count) + "/" + String(countLimit)
+        }
+    }
+    var countLimit: Int = 4 {
+        didSet {
+            countLabel.text = String(count) + "/" + String(countLimit)
         }
     }
     var timer: Timer?
@@ -40,7 +45,8 @@ class ViewController: UIViewController {
     func initialSetup() {
         isPlay = false
         tempoLabel.text = String(tempoValue)
-        countLabel.text = String(count)
+        countLabel.text = String(count) + "/" + String(countLimit)
+        countLabel.textColor = UIColor.green
     }
     
     func startTimer() {
@@ -54,6 +60,7 @@ class ViewController: UIViewController {
         timer?.invalidate()
         timer = nil
         count = 1
+        countLabel.textColor = UIColor.green
     }
     
     func playMetronomeAudio() {
@@ -62,9 +69,11 @@ class ViewController: UIViewController {
         if count == 1 {
             guard let soundPath = Bundle.main.path(forResource: "stick_low", ofType: "mp3") else { return }
             url = URL(fileURLWithPath: soundPath)
+            countLabel.textColor = UIColor.green
         } else {
             guard let soundPath = Bundle.main.path(forResource: "stick", ofType: "mp3") else { return }
             url = URL(fileURLWithPath: soundPath)
+            countLabel.textColor = UIColor.white
         }
         
         do {
@@ -80,7 +89,7 @@ class ViewController: UIViewController {
     
     func updateCount() {
         count += 1
-        if count > 4 {
+        if count > countLimit {
             count = 1
         }
     }
@@ -109,6 +118,14 @@ class ViewController: UIViewController {
     
     @IBAction func minusButtonAction(_ sender: Any) {
         tempoValue -= 1
+    }
+    
+    @IBAction func countPlusButtonAction(_ sender: Any) {
+        countLimit += 1
+    }
+    
+    @IBAction func countMinusButtonAction(_ sender: Any) {
+        countLimit -= 1
     }
     
 }
