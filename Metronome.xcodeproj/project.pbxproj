@@ -9,15 +9,14 @@
 /* Begin PBXBuildFile section */
 		87315EEF28F82B59004051C6 /* stick_low.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 87315EEE28F82B59004051C6 /* stick_low.mp3 */; };
 		8736B70028F7D8A900907650 /* stick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8736B6FF28F7D8A900907650 /* stick.mp3 */; };
-		87A2FA5428F67561002C1901 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A2FA5328F67561002C1901 /* AppDelegate.swift */; };
-		87A2FA5628F67561002C1901 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A2FA5528F67561002C1901 /* SceneDelegate.swift */; };
-		87A2FA5828F67561002C1901 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A2FA5728F67561002C1901 /* ViewController.swift */; };
-		87A2FA5B28F67561002C1901 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87A2FA5928F67561002C1901 /* Main.storyboard */; };
 		87A2FA5D28F67562002C1901 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87A2FA5C28F67562002C1901 /* Assets.xcassets */; };
-		87A2FA6028F67562002C1901 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87A2FA5E28F67562002C1901 /* LaunchScreen.storyboard */; };
 		87A2FA6B28F67562002C1901 /* MetronomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A2FA6A28F67562002C1901 /* MetronomeTests.swift */; };
 		87A2FA7528F67562002C1901 /* MetronomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A2FA7428F67562002C1901 /* MetronomeUITests.swift */; };
 		87A2FA7728F67562002C1901 /* MetronomeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A2FA7628F67562002C1901 /* MetronomeUITestsLaunchTests.swift */; };
+		D31F639B2AF923F600422588 /* MetronomeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31F639A2AF923F600422588 /* MetronomeApp.swift */; };
+		D31F639D2AF9242E00422588 /* MetronomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31F639C2AF9242E00422588 /* MetronomeView.swift */; };
+		D31F639F2AF9245400422588 /* MetronomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31F639E2AF9245400422588 /* MetronomeViewModel.swift */; };
+		D31F63A12AF924CB00422588 /* Metronome.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31F63A02AF924CB00422588 /* Metronome.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,18 +40,17 @@
 		87315EEE28F82B59004051C6 /* stick_low.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = stick_low.mp3; sourceTree = "<group>"; };
 		8736B6FF28F7D8A900907650 /* stick.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = stick.mp3; sourceTree = "<group>"; };
 		87A2FA5028F67561002C1901 /* Metronome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Metronome.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		87A2FA5328F67561002C1901 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		87A2FA5528F67561002C1901 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		87A2FA5728F67561002C1901 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		87A2FA5A28F67561002C1901 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		87A2FA5C28F67562002C1901 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		87A2FA5F28F67562002C1901 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		87A2FA6128F67562002C1901 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		87A2FA6628F67562002C1901 /* MetronomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetronomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		87A2FA6A28F67562002C1901 /* MetronomeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetronomeTests.swift; sourceTree = "<group>"; };
 		87A2FA7028F67562002C1901 /* MetronomeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetronomeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		87A2FA7428F67562002C1901 /* MetronomeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetronomeUITests.swift; sourceTree = "<group>"; };
 		87A2FA7628F67562002C1901 /* MetronomeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetronomeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D31F639A2AF923F600422588 /* MetronomeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetronomeApp.swift; sourceTree = "<group>"; };
+		D31F639C2AF9242E00422588 /* MetronomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetronomeView.swift; sourceTree = "<group>"; };
+		D31F639E2AF9245400422588 /* MetronomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetronomeViewModel.swift; sourceTree = "<group>"; };
+		D31F63A02AF924CB00422588 /* Metronome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metronome.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +90,10 @@
 		87A2FA4728F67561002C1901 = {
 			isa = PBXGroup;
 			children = (
+				D31F63A02AF924CB00422588 /* Metronome.swift */,
+				D31F639E2AF9245400422588 /* MetronomeViewModel.swift */,
+				D31F639C2AF9242E00422588 /* MetronomeView.swift */,
+				D31F639A2AF923F600422588 /* MetronomeApp.swift */,
 				87A2FA5228F67561002C1901 /* Metronome */,
 				87A2FA6928F67562002C1901 /* MetronomeTests */,
 				87A2FA7328F67562002C1901 /* MetronomeUITests */,
@@ -113,12 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				8736B6FE28F7D89500907650 /* Sound */,
-				87A2FA5328F67561002C1901 /* AppDelegate.swift */,
-				87A2FA5528F67561002C1901 /* SceneDelegate.swift */,
-				87A2FA5728F67561002C1901 /* ViewController.swift */,
-				87A2FA5928F67561002C1901 /* Main.storyboard */,
 				87A2FA5C28F67562002C1901 /* Assets.xcassets */,
-				87A2FA5E28F67562002C1901 /* LaunchScreen.storyboard */,
 				87A2FA6128F67562002C1901 /* Info.plist */,
 			);
 			path = Metronome;
@@ -245,11 +242,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87A2FA6028F67562002C1901 /* LaunchScreen.storyboard in Resources */,
 				8736B70028F7D8A900907650 /* stick.mp3 in Resources */,
 				87315EEF28F82B59004051C6 /* stick_low.mp3 in Resources */,
 				87A2FA5D28F67562002C1901 /* Assets.xcassets in Resources */,
-				87A2FA5B28F67561002C1901 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,9 +269,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87A2FA5828F67561002C1901 /* ViewController.swift in Sources */,
-				87A2FA5428F67561002C1901 /* AppDelegate.swift in Sources */,
-				87A2FA5628F67561002C1901 /* SceneDelegate.swift in Sources */,
+				D31F63A12AF924CB00422588 /* Metronome.swift in Sources */,
+				D31F639D2AF9242E00422588 /* MetronomeView.swift in Sources */,
+				D31F639F2AF9245400422588 /* MetronomeViewModel.swift in Sources */,
+				D31F639B2AF923F600422588 /* MetronomeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,25 +307,6 @@
 			targetProxy = 87A2FA7128F67562002C1901 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		87A2FA5928F67561002C1901 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				87A2FA5A28F67561002C1901 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		87A2FA5E28F67562002C1901 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				87A2FA5F28F67562002C1901 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		87A2FA7828F67562002C1901 /* Debug */ = {
@@ -459,7 +436,6 @@
 				INFOPLIST_FILE = Metronome/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -489,7 +465,6 @@
 				INFOPLIST_FILE = Metronome/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

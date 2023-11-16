@@ -8,13 +8,37 @@
 import SwiftUI
 
 struct MetronomeView: View {
+    @ObservedObject var viewModel: MetronomeViewModel
+    
+    let spacing: CGFloat = 10
+    @State private var numberOfItem = 4
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            NavigationView {
+                VStack {
+                    HStack {
+                        ForEach(0..<numberOfItem) { index in
+                            RoundedRectangle(cornerRadius: 10)
+                                .frame(width: 50, height: 50)
+                                .foregroundColor(Color.white)
+                                .padding()
+                        }
+                    }
+                    .padding()
+                }
+                .navigationBarTitle("Metronome", displayMode: .large)
+            }
+        }
+        .background(Color.green)
     }
 }
 
+
 struct MetronomeView_Previews: PreviewProvider {
     static var previews: some View {
-        MetronomeView()
+        MetronomeView(viewModel: MetronomeViewModel())
+            .previewLayout(.sizeThatFits)
+            .padding()
     }
 }
