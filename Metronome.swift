@@ -7,15 +7,21 @@
 
 import Foundation
 import AVFoundation
+import Combine
 
-class Metronome {
+class Metronome: ObservableObject {
     var tempo: Int
     var count: Int
     var countLimit: Int
-    var isPlaying: Bool
+    @Published var isPlaying: Bool {
+        didSet {
+            didChange.send()
+        }
+    }
     
     private var timer: Timer?
     private var audioPlayer: AVAudioPlayer?
+    var didChange = PassthroughSubject<Void, Never>()
     
     init(tempo: Int, count: Int, countLimit: Int, isPlaying: Bool) {
         self.tempo = tempo

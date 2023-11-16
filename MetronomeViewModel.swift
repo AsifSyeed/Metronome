@@ -16,6 +16,10 @@ class MetronomeViewModel: ObservableObject {
         metronome = Metronome(tempo: 60, count: 1, countLimit: 4, isPlaying: false)
     }
     
+    var isPlaying: Bool {
+        return metronome.isPlaying
+    }
+    
     var tempoText: String {
         return String(metronome.tempo)
     }
@@ -25,7 +29,7 @@ class MetronomeViewModel: ObservableObject {
     }
     
     var playButtonImageName: String {
-        return metronome.isPlaying ? "pause.circle.fill" : "play.circle.fill"
+        return metronome.isPlaying ? "pause.fill" : "play.fill"
     }
     
     func togglePlayPause() {
@@ -34,6 +38,8 @@ class MetronomeViewModel: ObservableObject {
         } else {
             metronome.startMetronome()
         }
+        
+        objectWillChange.send()
     }
     
     func incrementTempo() {
