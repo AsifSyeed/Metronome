@@ -9,36 +9,43 @@ import SwiftUI
 
 struct MetronomeView: View {
     @ObservedObject var viewModel: MetronomeViewModel
-    
     @State private var playButtonImageName: String = ""
     
     let spacing: CGFloat = 10
-    @State private var numberOfItem = 4
+    @State private var numberOfItems = 4
     
     var body: some View {
         ZStack {
             CustomColors.backgroundColor
                 .edgesIgnoringSafeArea(.all)
             VStack {
+                Spacer()
                 HStack {
-                    ForEach(0..<numberOfItem) { index in
-                        RoundedRectangle(cornerRadius: 10)
-                            .frame(width: 50, height: 50)
-                            .foregroundColor(CustomColors.inactiveTileColor)
-                            .padding()
+                    ForEach(0..<numberOfItems) { index in
+                        BeatView(isActive: index == viewModel.activeBeatIndex)
                     }
                 }
                 .padding()
                 HStack {
-                    Image(systemName: "minus")
-                        .foregroundColor(CustomColors.activeTileColor)
-                        .frame(width: 80, height: 80)
-                    Text("150")
+                    Button(action: {
+                        viewModel.decrementTempo()
+                    }) {
+                        Image(systemName: "minus")
+                            .foregroundColor(CustomColors.activeTileColor)
+                            .frame(width: 80, height: 80)
+                            .aspectRatio(contentMode: .fill)
+                    }
+                    Text(viewModel.tempoText)
                         .foregroundColor(CustomColors.textColor)
                         .font(.system(size: 100, weight: .bold))
-                    Image(systemName: "plus")
-                        .foregroundColor(CustomColors.activeTileColor)
-                        .frame(width: 80, height: 80)
+                    Button(action: {
+                        viewModel.incrementTempo()
+                    }) {
+                        Image(systemName: "plus")
+                            .foregroundColor(CustomColors.activeTileColor)
+                            .frame(width: 80, height: 80)
+                            .aspectRatio(contentMode: .fill)
+                    }
                 }
                 Button(action: {
                     viewModel.togglePlayPause()

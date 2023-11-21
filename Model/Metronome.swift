@@ -10,9 +10,20 @@ import AVFoundation
 import Combine
 
 class Metronome: ObservableObject {
-    var tempo: Int
-    var count: Int
-    var countLimit: Int
+    
+    @Published var tempo: Int {
+        didSet {
+            tempoChange.send()
+        }
+    }
+    
+    @Published var count: Int {
+        didSet {
+            countChange.send()
+        }
+    }
+    
+    @Published var countLimit: Int
     @Published var isPlaying: Bool {
         didSet {
             didChange.send()
@@ -22,6 +33,8 @@ class Metronome: ObservableObject {
     private var timer: Timer?
     private var audioPlayer: AVAudioPlayer?
     var didChange = PassthroughSubject<Void, Never>()
+    var countChange = PassthroughSubject<Void, Never>()
+    var tempoChange = PassthroughSubject<Void, Never>()
     
     init(tempo: Int, count: Int, countLimit: Int, isPlaying: Bool) {
         self.tempo = tempo
@@ -49,13 +62,13 @@ class Metronome: ObservableObject {
         timer = nil
         
         // Reset count
-        count = 1
+        count = 0
     }
     
     func playMetronomeAudio() {
         let soundFileName: String
         var isAccent = false
-
+        
         // Determine the sound file based on the count
         if count == 1 {
             soundFileName = "stick_low"
@@ -63,29 +76,26 @@ class Metronome: ObservableObject {
         } else {
             soundFileName = "stick"
         }
-
+        
         if let soundPath = Bundle.main.path(forResource: soundFileName, ofType: "mp3") {
             do {
                 let url = URL(fileURLWithPath: soundPath)
                 audioPlayer = try AVAudioPlayer(contentsOf: url)
                 audioPlayer?.play()
-
+                
                 if isAccent {
                     // Handle any special accent logic here
                 }
-
-                print(count)
-                print("played")
+                
             } catch {
                 print(error)
             }
         }
     }
-
+    
     
     func fireTimer() {
         updateCount()
-        playMetronomeAudio()
     }
     
     func updateCount() {
@@ -93,5 +103,7 @@ class Metronome: ObservableObject {
         if count > countLimit {
             count = 1
         }
+        
+        playMetronomeAudio()
     }
 }

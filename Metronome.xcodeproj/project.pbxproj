@@ -18,6 +18,7 @@
 		D31F639D2AF9242E00422588 /* MetronomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31F639C2AF9242E00422588 /* MetronomeView.swift */; };
 		D31F639F2AF9245400422588 /* MetronomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31F639E2AF9245400422588 /* MetronomeViewModel.swift */; };
 		D31F63A12AF924CB00422588 /* Metronome.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31F63A02AF924CB00422588 /* Metronome.swift */; };
+		D36761102B0CB0D80028D9EE /* BeatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D367610F2B0CB0D80028D9EE /* BeatView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		D31F639C2AF9242E00422588 /* MetronomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetronomeView.swift; sourceTree = "<group>"; };
 		D31F639E2AF9245400422588 /* MetronomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetronomeViewModel.swift; sourceTree = "<group>"; };
 		D31F63A02AF924CB00422588 /* Metronome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metronome.swift; sourceTree = "<group>"; };
+		D367610F2B0CB0D80028D9EE /* BeatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeatView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,10 +102,10 @@
 		87A2FA4728F67561002C1901 = {
 			isa = PBXGroup;
 			children = (
+				D36761122B0CB0F20028D9EE /* Model */,
+				D367610E2B0CB0C90028D9EE /* View */,
+				D36761112B0CB0E40028D9EE /* ViewModel */,
 				876EAF1E2B06492A004CAA2A /* Supporting Files */,
-				D31F63A02AF924CB00422588 /* Metronome.swift */,
-				D31F639E2AF9245400422588 /* MetronomeViewModel.swift */,
-				D31F639C2AF9242E00422588 /* MetronomeView.swift */,
 				D31F639A2AF923F600422588 /* MetronomeApp.swift */,
 				87A2FA5228F67561002C1901 /* Metronome */,
 				87A2FA6928F67562002C1901 /* MetronomeTests */,
@@ -147,6 +149,31 @@
 				87A2FA7628F67562002C1901 /* MetronomeUITestsLaunchTests.swift */,
 			);
 			path = MetronomeUITests;
+			sourceTree = "<group>";
+		};
+		D367610E2B0CB0C90028D9EE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D31F639C2AF9242E00422588 /* MetronomeView.swift */,
+				D367610F2B0CB0D80028D9EE /* BeatView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D36761112B0CB0E40028D9EE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D31F639E2AF9245400422588 /* MetronomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D36761122B0CB0F20028D9EE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D31F63A02AF924CB00422588 /* Metronome.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,6 +309,7 @@
 			files = (
 				D31F63A12AF924CB00422588 /* Metronome.swift in Sources */,
 				876EAF202B06493F004CAA2A /* CustomColors.swift in Sources */,
+				D36761102B0CB0D80028D9EE /* BeatView.swift in Sources */,
 				D31F639D2AF9242E00422588 /* MetronomeView.swift in Sources */,
 				D31F639F2AF9245400422588 /* MetronomeViewModel.swift in Sources */,
 				D31F639B2AF923F600422588 /* MetronomeApp.swift in Sources */,
